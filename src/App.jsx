@@ -39,13 +39,13 @@ function App() {
           </section>
         </div>
         <div className="Redes">
-          <a hrfe="https://github.com/settings/admin">
+          <a hrfe="https://github.com/kevin15042005">
             <img src={imagenGithub} alt="Github" />
           </a>
           <a href="https://www.linkedin.com/in/kevin-alejandro-b28039190/">
             <img src={imagenLinkedin} alt="Linkedink" />
           </a>
-          <a href="">
+          <a href="https://wa.me/573001234567?text=Buena%20tarde%20kevin%20quisiera%20saber%20mas%20sobre%20ti?">
             <img src={imagenwhatsapp} alt="Whatsapp" />
           </a>
         </div>
