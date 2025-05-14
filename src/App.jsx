@@ -20,6 +20,9 @@ import Perfil from "./assets/Perfil.png";
 import "./App.css";
 
 function App() {
+  const RediriguirCorreo = () => {
+    window.location.href = "mailto:kevinrey150425@gmail.com";
+  };
   return (
     <>
       <headers>
@@ -157,7 +160,7 @@ function App() {
               <div id="Contacto" className="Contacto">
                 <h3>Contactame</h3>
                 <form className="formulario-contacto">
-                  <button>
+                  <button onClick={RediriguirCorreo}>
                     <img src={imagenGmail} alt="" />
                     <span> kevinrey150425@gmail.com</span>
                   </button>
