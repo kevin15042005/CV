@@ -23,3 +23,81 @@
 .item-proyectos{
   margin:8rem ;
 }
+
+/*Border*/
+.neon-border {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  margin: 1rem;
+  font-size: 20px;
+  color: #38b48b;
+  overflow: hidden;
+}
+
+.neon-border::before,
+.neon-border::after,
+.neon-border span::before,
+.neon-border span::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, transparent, #38b48b);
+  z-index: 1;
+}
+
+.neon-border::before {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  animation: span1 2s linear infinite;
+}
+
+.neon-border::after {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to left, transparent, #38b48b);
+  animation: span3 2s linear infinite 1s;
+}
+
+.neon-border span::before {
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #38b48b);
+  animation: span2 2s linear infinite 0.5s;
+}
+
+.neon-border span::after {
+  bottom: -100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #38b48b);
+  animation: span4 2s linear infinite 1.5s;
+}
+
+@keyframes span1 {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes span2 {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+@keyframes span3 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+@keyframes span4 {
+  0% { bottom: -100%; }
+  100% { bottom: 100%; }
+}
+
