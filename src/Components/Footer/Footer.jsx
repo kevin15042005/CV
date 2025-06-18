@@ -6,7 +6,7 @@ import Linkedin from "../../assets/linkedin.svg";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-black text-white px-4 py-10">
+      <footer id="contacto" className="bg-black text-white px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="flex flex-col items-center gap-4 text-center">
             <img
@@ -57,7 +57,10 @@ export default function Footer() {
               alt="LinkedIn"
             />
             <h4 className="text-xl font-semibold">LinkedIn</h4>
-            <a className="text-purple-400 md:text-white hover:text-purple-400" href="#">
+            <a
+              className="text-purple-400 md:text-white hover:text-purple-400"
+              href="#"
+            >
               Kevin Reyes
             </a>
           </div>

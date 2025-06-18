@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
@@ -24,7 +24,7 @@ const Desempeño = () => {
   ));
 
   return (
-    <span className="text-green-500 text-[2rem] font-bold">
+    <span className="text-green-500 text-[2rem] font-bold font-serif">
       {letrasAnimada}
     </span>
   );
@@ -43,7 +43,7 @@ const Desempeño1 = () => {
   ));
 
   return (
-    <span className="text-green-500 text-[2rem] font-bold">
+    <span className="text-green-500 text-[2rem] font-bold font-serif">
       {letrasAnimada}
     </span>
   );
@@ -62,7 +62,7 @@ const Desempeño2 = () => {
   ));
 
   return (
-    <span className="text-green-500 text-[2rem] font-bold">
+    <span className="text-green-500 text-[2rem] font-bold font-serif">
       {letrasAnimada}
     </span>
   );
@@ -104,45 +104,48 @@ function App() {
           </header>
         </div>
         <div className="z-0">
-          <section className="relative w-full h-screen flex  justify-evenly items-center bg-black text-white overflow-hidden m">
+          <section id="principal" className="relative w-full h-screen flex  justify-evenly items-center bg-black text-white overflow-hidden m">
             <img
               className="opacity-20 absolute top-0 left-0 w-full h-full object-cover z-0 "
               src={ImageFondoPerfil}
               alt=""
             />
-            <div className="relative z-5 p-6">
-              <h1 className="text-[2rem] font-bold max-w-sm ">
+            <div className="relative z-5 p-6 max-lg:mt-0 md:mt-40">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold max-w-sm">
                 <TextoAnimado
                   text="HOLA , YO SOY! KEVIN REYES, DESARROLLADOR"
                   delay={300}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-4xl mt-10 "
-                />{" "}
+                  className="text-2xl sm:text-3xl md:text-4xl mt-6 font-serif"
+                />
                 <TextoAnimado
                   text="   FRONT END"
                   delay={500}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-3xl mb-8 text-green-400 "
-                />{" "}
+                  className="text-xl sm:text-2xl md:text-3xl text-green-400 mb-8 font-sans"
+                />
               </h1>
-              <div className=" mt-3 text-lg text-white font-medium leading-5 max-w-[30rem]  items-start">
+
+              <div className="mt-3 text-base sm:text-lg md:text-xl text-white font-medium leading-6 max-w-xl">
                 <TextoAnimado
                   text="Soy un apasionado por el desarrollo web con interés en crear experiencias digitales intuitivas. Me gusta aprender constantemente y mejorar mis habilidades para construir interfaces claras, funcionales y pensadas para el usuario."
                   delay={200}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-3xl mb-8 flex justify-center"
-                />{" "}
+                  className="text-sm sm:text-base md:text-lg font-mono"
+                />
               </div>
-              <div>
+
+              <div className="mt-4">
                 <ButtonCV />
               </div>
             </div>
+
             <div className="hidden md:block  w-80 z-5">
               <ProfileCard
                 name="Kevin A. Reyes S."
@@ -158,43 +161,51 @@ function App() {
           </section>
         </div>
         {/*---------------------------------*/}
-        <section className="w-full px-4 py-8 my-12">
+        <section id="sobre-mi" className="w-full px-4 py-8 my-12">
           <div className="flex justify-center items-center mt-6">
             <h2 className="font-bold text-center">
               <Desempeño />
             </h2>
           </div>
           <div className="grid grid-rows-2 md:grid-cols-2 gap-6 max-w-6xl mx-auto mt-8">
-            <div >
-              <span className="neon-border">2025</span>
-              <h3 className="text-4xl font-bold p-2 font">Practicante</h3>
-              <p className="text-lg">
+            <div>
+              <span className="neon-border font-bold">2025</span>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2">
+                Practicante
+              </h3>
+              <p className="text-[20px] font-mono p-2">
                 Desarorlador FullStack , y colaborando gestion de Redes y
                 gestion de datos en Microsoft 365 en Comsel S.A.S
               </p>
             </div>
             <div>
-              <span className="neon-border">2023–2025</span>
+              <span className="neon-border font-bold">2023–2025</span>
 
-              <h3 className="text-4xl font-bold p-2">Tecnologo de Software</h3>
-              <p className="text-lg">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2">
+                Tecnologo de Software
+              </h3>
+              <p className="text-[20px] font-mono p-2">
                 Desarrollador de aplicaciones web utilizando React , MySql2 ,
                 Node.js{" "}
               </p>
             </div>
             <div>
-              <span className="neon-border">2023–2025</span>
-              <h3 className="text-4xl font-bold p-2">Tecnologo de Software</h3>
-              <p className="text-lg">
+              <span className="neon-border font-bold">2022</span>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2">
+                Tecnologo de Software
+              </h3>
+              <p className="text-[20px] font-mono p-2">
                 Desarrollador de aplicaciones web utilizando React , MySql2 ,
                 Node.js{" "}
               </p>
             </div>
             <div>
-              <span className="neon-border">2023–2025</span>
+              <span className="neon-border font-bold">2023–2025</span>
 
-              <h3 className="text-4xl font-bold p-2">Tecnologo de Software</h3>
-              <p className="text-lg">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2 ">
+                Tecnologo de hadware
+              </h3>
+              <p className="text-[20px] font-mono p-2">
                 Desarrollador de aplicaciones web utilizando React , MySql2 ,
                 Node.js{" "}
               </p>
@@ -202,7 +213,7 @@ function App() {
           </div>
         </section>
         {/*------------------------------*/}
-        <section className="relative w-full min-h-screen py-10  flex justify-evenly items-center bg-black text-white overflow-hidden">
+        <section id="habilidades"className="relative w-full min-h-screen py-10  flex justify-evenly items-center bg-black text-white overflow-hidden">
           <img
             className="opacity-20 absolute top-0 left-0 w-full h-full object-cover z-0 "
             src={ImagenFondo}
@@ -215,7 +226,7 @@ function App() {
 
             <div className="conocimiento-herramientas grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
               <div>
-                <h3 className="text-center font-bold text-3xl my-6">
+                <h3 className="text-center font-serif font-bold font- text-4xl my-6">
                   Front End
                 </h3>
                 <div className="gap-3">
@@ -271,8 +282,9 @@ function App() {
                   </ul>
                 </div>
               </div>
+
               <div>
-                <h3 className="text-center font-bold text-3xl my-6">
+                <h3 className="text-center font-serif font-bold font- text-4xl my-6">
                   Back End
                 </h3>
                 <div>
@@ -317,12 +329,12 @@ function App() {
                 </div>
               </div>
               <div>
-                <h3 className="text-center font-bold text-3xl my-6">
-                  Base de Datoss
+                <h3 className="text-center font-serif font-bold font- text-4xl my-6">
+                  Base de Datos
                 </h3>
                 <div>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-db hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-bold  font-sans text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-db hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       MongDB
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -350,7 +362,7 @@ function App() {
                 </div>
               </div>
               <div>
-                <h3 className="text-center font-bold text-3xl my-6">
+                <h3 className="text-center font-serif font-bold font- text-4xl my-6">
                   Adicionales
                 </h3>
                 <div>
@@ -386,7 +398,7 @@ function App() {
           </div>
         </section>
         {/*-------------------------*/}
-        <section className="w-full px-4 py-8 my-12">
+        <section id="proyectos" className="w-full px-4 py-8 my-12">
           <div className="my-8">
             <h2>
               <Desempeño2 />
