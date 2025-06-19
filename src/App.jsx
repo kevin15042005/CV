@@ -10,48 +10,8 @@ import ProfileCard from "./Components/Card/ProfileCard.jsx";
 import ImageFondoPerfil from "./assets/Fondo-Perfil.webp";
 import TextoAnimado from "./Components/TextoAnimado/TextoAnimado.jsx";
 import ButtonCV from "./Components/ButtonCV/ButtonCV.jsx";
-const Desempeño = () => {
-  const Educacion = "Educacion";
-
-  const letrasAnimada = Educacion.split("").map((letra, index) => (
-    <span
-      key={`texto${index}`}
-      className="letra text-5xl"
-      style={{ animationDelay: `${index * 0.3}s` }}
-    >
-      {letra === " " ? "\u00A0" : letra}
-    </span>
-  ));
-
-  return (
-    <span className="text-green-500 text-[2rem] font-bold font-serif">
-      {letrasAnimada}
-    </span>
-  );
-};
-const Desempeño1 = () => {
-  const Habilidades = "Habilidades";
-
-  const letrasAnimada = Habilidades.split("").map((letra, index) => (
-    <span
-      key={`texto${index}`}
-      className="letra text-5xl"
-      style={{ animationDelay: `${index * 0.3}s` }}
-    >
-      {letra === " " ? "\u00A0" : letra}
-    </span>
-  ));
-
-  return (
-    <span className="text-green-500 text-[2rem] font-bold font-serif">
-      {letrasAnimada}
-    </span>
-  );
-};
-const Desempeño2 = () => {
-  const Proyectos = "Proyectos";
-
-  const letrasAnimada = Proyectos.split("").map((letra, index) => (
+const Desempeño = ({ texto }) => {
+  const letrasAnimada = texto.split("").map((letra, index) => (
     <span
       key={`texto${index}`}
       className="letra text-5xl"
@@ -73,8 +33,9 @@ function App() {
     {
       id: 1,
       imagen: ImagenFondo,
-      fecha: "October 18, 2023",
-      descripcion: "Texto del proyecto 1 que será recortado con Leer más.",
+      fecha: "1/01/2025",
+      descripcion: `Proyecto elaborado para una microempresa de pintura y diseños especializados en motocicletas. Esta plataforma beneficia a los usuarios mediante una interacción fácil e intuitiva, permitiéndoles seguir paso a paso el proceso del diseño. El sitio integra diversos aspectos como la calidad del trabajo, la ubicación del taller, el número de personas que conforman la microempresa, y la confianza que se genera entre ellos, entre otros elementos clave.`,
+      link:"https://www.youtube.com/watch?v=Dt9w2CCatrc&t=32s"
     },
     {
       id: 2,
@@ -104,21 +65,24 @@ function App() {
           </header>
         </div>
         <div className="z-0">
-          <section id="principal" className="relative w-full h-screen flex  justify-evenly items-center bg-black text-white overflow-hidden m">
+          <section
+            id="principal"
+            className="relative w-full h-screen flex  justify-evenly items-center bg-black text-white overflow-hidden m"
+          >
             <img
               className="opacity-20 absolute top-0 left-0 w-full h-full object-cover z-0 "
               src={ImageFondoPerfil}
               alt=""
             />
-            <div className="relative z-5 p-6 max-lg:mt-0 md:mt-40">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold max-w-sm">
+            <div className="relative z-5 p-6 max-lg:mt-0">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold max-w-sm  items-center ">
                 <TextoAnimado
                   text="HOLA , YO SOY! KEVIN REYES, DESARROLLADOR"
                   delay={300}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-2xl sm:text-3xl md:text-4xl mt-6 font-serif"
+                  className="text-2xl sm:text-3xl md:text-4xl mt-6 font-Playfair"
                 />
                 <TextoAnimado
                   text="   FRONT END"
@@ -126,7 +90,7 @@ function App() {
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-xl sm:text-2xl md:text-3xl text-green-400 mb-8 font-sans"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#00ffaa]  mb-8 font-Playfair "
                 />
               </h1>
 
@@ -164,13 +128,13 @@ function App() {
         <section id="sobre-mi" className="w-full px-4 py-8 my-12">
           <div className="flex justify-center items-center mt-6">
             <h2 className="font-bold text-center">
-              <Desempeño />
+              <Desempeño texto={"Educacion"} />
             </h2>
           </div>
           <div className="grid grid-rows-2 md:grid-cols-2 gap-6 max-w-6xl mx-auto mt-8">
             <div>
               <span className="neon-border font-bold">2025</span>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2">
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold font-Playfair p-2">
                 Practicante
               </h3>
               <p className="text-[20px] font-mono p-2">
@@ -181,7 +145,7 @@ function App() {
             <div>
               <span className="neon-border font-bold">2023–2025</span>
 
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2">
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold font-Playfair p-2">
                 Tecnologo de Software
               </h3>
               <p className="text-[20px] font-mono p-2">
@@ -191,29 +155,21 @@ function App() {
             </div>
             <div>
               <span className="neon-border font-bold">2022</span>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2">
-                Tecnologo de Software
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold font-Playfair p-2">
+                Tecnico de Software
               </h3>
               <p className="text-[20px] font-mono p-2">
-                Desarrollador de aplicaciones web utilizando React , MySql2 ,
-                Node.js{" "}
-              </p>
-            </div>
-            <div>
-              <span className="neon-border font-bold">2023–2025</span>
-
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif p-2 ">
-                Tecnologo de hadware
-              </h3>
-              <p className="text-[20px] font-mono p-2">
-                Desarrollador de aplicaciones web utilizando React , MySql2 ,
-                Node.js{" "}
+                Habilidades técnicas en mantenimiento de software y buena
+                comprensión del código. Técnico en Software.
               </p>
             </div>
           </div>
         </section>
         {/*------------------------------*/}
-        <section id="habilidades"className="relative w-full min-h-screen py-10  flex justify-evenly items-center bg-black text-white overflow-hidden">
+        <section
+          id="habilidades"
+          className="relative w-full min-h-screen py-10  flex justify-evenly items-center bg-black text-white overflow-hidden"
+        >
           <img
             className="opacity-20 absolute top-0 left-0 w-full h-full object-cover z-0 "
             src={ImagenFondo}
@@ -221,7 +177,7 @@ function App() {
           />
           <div className=" z-5  w-full max-w-6xl px-4 ">
             <h2 className="text-center  mb-4 font font-bold ">
-              <Desempeño1 />
+              <Desempeño texto={"Habilidades"} />
             </h2>
 
             <div className="conocimiento-herramientas grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
@@ -231,7 +187,7 @@ function App() {
                 </h3>
                 <div className="gap-3">
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-front hover:traslate-y-1  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-front hover:traslate-y-1  hover:scale-105 hover:text-teal-800">
                       HTML{" "}
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -243,7 +199,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className=" font-bold  text-3xl border-2 p-3 rounded-md text-[#38b48b]  item-front  hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className="  font-inter text-3xl border-2 p-3 rounded-md text-[#38b48b]  item-front  hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       CSS
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -255,7 +211,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-front hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-front hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       REACT
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -267,7 +223,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className=" font-bold  text-3xl border-2 p-3 rounded-md text-[#38b48b]  item-front hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl border-2 p-3 rounded-md text-[#38b48b]  item-front hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       TAILWINDCSS
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -289,7 +245,7 @@ function App() {
                 </h3>
                 <div>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-backend hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-backend hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       Node.js
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -301,7 +257,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-backend hover:traslate-y-2 hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-backend hover:traslate-y-2 hover:scale-105 hover:text-teal-800">
                       Express
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -313,7 +269,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-backend hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-backend hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       JavaScript
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -334,7 +290,7 @@ function App() {
                 </h3>
                 <div>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <li className=" font-bold  font-sans text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-db hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-db hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       MongDB
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -346,7 +302,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className=" font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-db hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className=" font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-db hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       MySql
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -367,7 +323,7 @@ function App() {
                 </h3>
                 <div>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <li className="  font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-adicional hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className="  font-inter text-3xl  border-2 p-3 rounded-md text-[#38b48b]  item-adicional hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       Git
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -379,7 +335,7 @@ function App() {
                         </div>
                       </div>
                     </li>
-                    <li className="  font-bold  text-3xl  border-2 p-3 rounded-md text-[#38b48b] item-adiciona hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
+                    <li className="  font-inter  text-3xl  border-2 p-3 rounded-md text-[#38b48b] item-adiciona hover:traslate-y-2  hover:scale-105 hover:text-teal-800">
                       GitHub
                       <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                         <div
@@ -401,18 +357,18 @@ function App() {
         <section id="proyectos" className="w-full px-4 py-8 my-12">
           <div className="my-8">
             <h2>
-              <Desempeño2 />
+              <Desempeño texto={"Proyectos"} />
             </h2>
-            <p className="my-6 text-[20px]">
-              Estos son los proyectos personales elaborados para mejorar mi
-              experiencia{" "}
+            <p className="my-6 text-0 sm:text-1xl lg:text-2xl font-inter">
+              Proyectos personales elaborados mejorar mi experiencia y
+              conocimientos{" "}
             </p>
           </div>
           <ul className="grid  grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {proyectos.map((proyecto) => (
               <li
                 key={proyecto.id}
-                className="item-proyecto flex flex-col justify-between items-center border p-4 h-full"
+                className="item-proyecto flex flex-col justify-between items-center border rounded-[25px] p-4 h-full"
               >
                 <img
                   className="w-full h-60 object-contain mt-1 mb-6"
@@ -423,6 +379,14 @@ function App() {
                   {proyecto.fecha}
                 </span>
                 <LeerMas texto={proyecto.descripcion} limite={40} />
+                <a
+                  href={proyecto.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 hover:underline"
+                >
+                  Ver Proyecto
+                </a>
               </li>
             ))}
           </ul>

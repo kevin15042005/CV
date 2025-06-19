@@ -14,9 +14,9 @@ export default function Footer() {
               src={Whatsapp}
               alt="Whatsapp"
             />
-            <h4 className="text-xl font-semibold">Whatsapp</h4>
+            <h4 className="text-xl font-inter">Whatsapp</h4>
             <a
-              className="text-purple-400 md:text-white hover:text-purple-400"
+              className="font-merri text-purple-400 md:text-white hover:text-purple-400"
               href="https://wa.me/573202837622"
             >
               +57 320 283 7622
@@ -28,9 +28,9 @@ export default function Footer() {
               src={Correo}
               alt="Correo"
             />
-            <h4 className="text-xl font-semibold">Correo</h4>
+            <h4 className="text-xl font-inter" >Correo</h4>
             <a
-              className="text-purple-400 md:text-white hover:text-purple-400"
+              className="font-merri text-purple-400 md:text-white hover:text-purple-400"
               href="mailto:kevin2013118@gmail.com"
             >
               kevin2013118@gmail.com
@@ -42,9 +42,9 @@ export default function Footer() {
               src={GitHub}
               alt="GitHub"
             />
-            <h4 className="text-xl font-semibold">GitHub</h4>
+            <h4 className="text-xl font-inter">GitHub</h4>
             <a
-              className="text-purple-400 md:text-white hover:text-purple-400"
+              className="font-merri text-purple-400 md:text-white hover:text-purple-400"
               href="https://github.com/kevin150425"
             >
               kevin150425
@@ -56,9 +56,9 @@ export default function Footer() {
               src={Linkedin}
               alt="LinkedIn"
             />
-            <h4 className="text-xl font-semibold">LinkedIn</h4>
+            <h4 className="text-xl font-inter">LinkedIn</h4>
             <a
-              className="text-purple-400 md:text-white hover:text-purple-400"
+              className="font-merri text-purple-400 md:text-white hover:text-purple-400"
               href="#"
             >
               Kevin Reyes

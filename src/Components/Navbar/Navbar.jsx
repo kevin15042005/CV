@@ -30,7 +30,7 @@ const Navbar = () => {
         </button>
 
         {/* Menú Desktop */}
-        <ul className="hidden md:flex md:flex-row md:gap-6 text-white">
+        <ul className="hidden md:flex md:flex-row md:gap-6 text-white font-doto">
           {menuItems.map((item) => (
             <li
               key={item.id}

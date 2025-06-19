@@ -279,8 +279,8 @@ const ProfileCardComponent = ({
           </div>
           <div className="pc-content">
             <div className="pc-details">
-              <h3>{name}</h3>
-              <p>{title}</p>
+              <h3 className="font-Playfair text-white">{name}</h3>
+              <p className="font-Playfair">{title}</p>
             </div>
           </div>
         </div>
